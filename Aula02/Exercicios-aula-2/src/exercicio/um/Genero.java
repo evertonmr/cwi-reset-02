@@ -1,7 +1,7 @@
 package exercicio.um;
 
 public enum Genero {
-    MASCOLINO ("Masculino"),
+    MASCULINO("Masculino"),
     FEMININO ("Feminino"),
     NAO_BINARIO ("Não Binário");
 

@@ -8,13 +8,13 @@ public class Aplicacao {
                 "Peter Jackson",
                 59,
                 17,
-                Genero.MASCOLINO);
+                Genero.MASCULINO);
 
         Diretor davidFincher = new Diretor(
                 "David Fincher",
                 58,
                 11,
-                Genero.MASCOLINO);
+                Genero.MASCULINO);
 
 
         // Criação de atores
@@ -42,10 +42,11 @@ public class Aplicacao {
 
         Filme oClubeDaLuta = new Filme(
                 "O Clube da Luta",
-                "Um homem deprimido que sofre de insônia conhece um estranho vendedor chamado Tyler Durden e se" +
-                        " vê morando em uma casa suja depois que seu perfeito apartamento é destruído. A dupla forma " +
-                        "um clube com regras rígidas onde homens lutam. A parceria perfeita é comprometida quando uma " +
-                        "mulher, Marla, atrai a atenção de Tyler.",
+                """
+                        Um homem deprimido que sofre de insônia conhece um estranho vendedor chamado
+                        Tyler Durden e se vê morando em uma casa suja depois que seu perfeito apartamento é destruído.
+                        A dupla forma um clube com regras rígidas onde homens lutam. A parceria perfeita é comprometida
+                        quando uma mulher, Marla, atrai a atenção de Tyler.""",
                 139,
                 4,
                 davidFincher);
