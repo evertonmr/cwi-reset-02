@@ -4,16 +4,16 @@ public class Aplicacao {
 
         Calculadora calculadora = new Calculadora();
 
-        int subtracao = calculadora.subtracao(9, 4);
+        double subtracao = calculadora.subtracao(9, 4);
         System.out.println(subtracao);
 
-        int soma = calculadora.soma(1, 5);
+        double soma = calculadora.soma(1, 5);
         System.out.println(soma);
 
-        float divisao = calculadora.divide(4, 2);
+        double divisao = calculadora.divide(4, 2);
         System.out.println(divisao);
 
-        float multplicacao = calculadora.multplica(7, 7);
+        double multplicacao = calculadora.multplica(7, 7);
         System.out.println(multplicacao);
 
     }
