@@ -23,7 +23,7 @@ public class ImoveisParaFinanciamento {
         }
         else {
             System.out.println("Atenção, problema de registro! Imóveis com valor R$"
-                    + imovel.getValor() + "não são aceitos no programa.");
+                    + imovel.getValor() + " não são aceitos no programa.");
         }
         // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
         //    imoveis.add(imovel);

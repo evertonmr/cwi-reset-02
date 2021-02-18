@@ -40,7 +40,7 @@ public class Endereco {
     }
 
     public String descreverEnderecoCompleto () {
-        return "logradouro " + logradouro +
+        return  "logradouro " + logradouro +
                 ", número " + numero +
                 ", " + complemento +
                 ", bairro " + bairro +

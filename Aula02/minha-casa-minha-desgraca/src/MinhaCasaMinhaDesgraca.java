@@ -19,40 +19,55 @@ public class MinhaCasaMinhaDesgraca {
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
 
-        opcoesParaFinanciamento.registrarImovel(new Imovel(
-                160000.00,
-                new Endereco("Ferraz de Abreu",
-                            "510",
-                            "D402",
-                            "Rio dos Sinos",
-                            "São Leopoldo",
-                            UnidadeFederativa.RIO_GRANDE_DO_SUL)));
+        opcoesParaFinanciamento.registrarImovel(
+                new Apartamento(160000.00,
+                        new Endereco(   "Ferraz de Abreu",
+                                "550",
+                                "D402",
+                                "Rio dos Sinos",
+                                "São Leopoldo",
+                                UnidadeFederativa.RIO_GRANDE_DO_SUL),
+                        4));
 
-        opcoesParaFinanciamento.registrarImovel(new Imovel(
-                180000.00,
-                new Endereco("Ferraz de Abreu",
-                        "510",
-                        "D402",
-                        "Rio dos Sinos",
-                        "São Leopoldo",
-                        UnidadeFederativa.RIO_DE_JANEIRO)));
+        opcoesParaFinanciamento.registrarImovel(
+                new Apartamento(1100000.00,
+                        new Endereco(   "Eduardo Chaia",
+                                "148",
+                                "1245",
+                                "Batel",
+                                "Quarapuava",
+                                UnidadeFederativa.PARANA),
+                        12));
 
-        opcoesParaFinanciamento.registrarImovel(new Imovel(
-                200000.00,
-                new Endereco("Ferraz de Abreu",
-                        "510",
-                        "D402",
-                        "Rio dos Sinos",
-                        "São Leopoldo",
-                        UnidadeFederativa.SAO_PAULO)));
-        opcoesParaFinanciamento.registrarImovel(new Imovel(
-                2000000.00,
-                new Endereco("Ferraz de Abreu",
-                        "510",
-                        "D402",
-                        "Rio dos Sinos",
-                        "São Leopoldo",
-                        UnidadeFederativa.SAO_PAULO)));
+        opcoesParaFinanciamento.registrarImovel(
+                new Casa(550000.00,
+                        new Endereco(   "Buganvílea",
+                                "156",
+                                "Condomínio Primavera",
+                                "Primavera",
+                                "Timóteo",
+                                UnidadeFederativa.MINAS_GERIAS),
+                        true));
+
+        opcoesParaFinanciamento.registrarImovel(
+                new Casa(890000.00,
+                        new Endereco(   "Sena Madureira",
+                                "1570",
+                                "casa",
+                                "Jardim Cumbica",
+                                "Quarulhos",
+                                UnidadeFederativa.SAO_PAULO),
+                        true));
+        opcoesParaFinanciamento.registrarImovel(
+                new Casa(120000.00,
+                        new Endereco(   "Verônica",
+                                "9876",
+                                "casa",
+                                "Parque Belém",
+                                "Angra dos Reis",
+                                UnidadeFederativa.RIO_DE_JANEIRO),
+                        false));
+
 
         /**
          * FIM

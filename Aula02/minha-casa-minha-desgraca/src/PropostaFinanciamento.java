@@ -41,7 +41,7 @@ public class PropostaFinanciamento {
 
     private void imprimirPropostaAprovada() throws InterruptedException {
         Thread.sleep(1000);
-        System.out.println("Imóvel escolhido: " + imovelEscolhido.apresentacao());
+        System.out.println( "Imóvel escolhido: " + imovelEscolhido.apresentacao());
         Thread.sleep(5000);
         System.out.println("Financiamento aprovado! Parabéns " + beneficiario.getNome() + "!" + " Agora você tem uma dívida de " + mesesParaPagamento + " meses!");
 
