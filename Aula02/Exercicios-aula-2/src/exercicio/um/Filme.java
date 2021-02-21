@@ -1,20 +1,24 @@
 package exercicio.um;
 
+import java.util.List;
+
 public class Filme {
     private String nome;
     private String descricao;
     private int duracao;
     private int avaliacao;
     private Diretor diretor;
+    private List<Pessoa> elenco;
 
 
-    public Filme(String nome, String descricao, int duracao, int avaliacao, Diretor diretor) {
+    public Filme(String nome, String descricao, int duracao, int avaliacao, Diretor diretor, List<Pessoa> elenco) {
         defineAvaliacao(avaliacao);
         defineAvaliacaoDeAcordoComNome(nome);
         this.nome = nome;
         this.descricao = descricao;
         this.duracao = duracao;
         this.diretor = diretor;
+        this.elenco = elenco;
     }
 
         public void reproduzir(){
@@ -40,6 +44,15 @@ public class Filme {
                 this.avaliacao = 5;
             } else if ("Batman vs Superman".equals(nome)){
                 this.avaliacao = 1;
+            }
+        }
+
+        public void exibirCreditos (){
+            System.out.println("----------------------");
+            System.out.println("Creditos do Filme " + nome);
+            System.out.println("----------------------");
+            for (Pessoa membro : elenco){
+                membro.descricao();
             }
         }
 

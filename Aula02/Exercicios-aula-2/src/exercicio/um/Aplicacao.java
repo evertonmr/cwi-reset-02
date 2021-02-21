@@ -1,29 +1,42 @@
 package exercicio.um;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public class Aplicacao {
 
     public static void main(String[] args) {
         // Criação de Diretores
         Diretor peterJackson = new Diretor(
                 "Peter Jackson",
-                59,
-                17,
-                Genero.MASCULINO);
+                LocalDate.parse("1961-10-31"),
+                Genero.MASCULINO,
+                17);
 
         Diretor davidFincher = new Diretor(
                 "David Fincher",
-                58,
-                11,
-                Genero.MASCULINO);
-
-
+                LocalDate.parse("1962-08-28"),
+                Genero.MASCULINO,
+                11);
+        
         // Criação de atores
         Ator ianMcKellen = new Ator(
                 "Ian McKellen",
-                81,
-                0,
-                Genero.NAO_BINARIO);
+                LocalDate.parse("1939-05-25"),
+                Genero.NAO_BINARIO,
+                0);
 
+        Ator elijahWood = new Ator(
+                "Elijah Jordan Wood",
+                LocalDate.parse("1981-01-28"),
+                Genero.MASCULINO,
+                0);
+
+        Ator bradPitt = new Ator(
+                "William Bradley Pitt",
+                LocalDate.parse("1963-12-18"),
+                Genero.MASCULINO,
+                2);
 
         // Criação de filmes
         Filme oSenhorDosAneisUm = new Filme(
@@ -31,14 +44,14 @@ public class Aplicacao {
                 "Melhor filme de todos",
                 999,
                 5,
-                peterJackson);
+                peterJackson, List.of(peterJackson ,elijahWood, ianMcKellen));
 
         Filme oSenhorDosAneisDois = new Filme(
                 "O Senhor dos Aneis: As Duas Torres",
                 "Melhor filme de todos",
                 999,
                 5,
-                peterJackson);
+                peterJackson, List.of(peterJackson ,elijahWood, ianMcKellen));
 
         Filme oClubeDaLuta = new Filme(
                 "O Clube da Luta",
@@ -49,7 +62,7 @@ public class Aplicacao {
                         quando uma mulher, Marla, atrai a atenção de Tyler.""",
                 139,
                 4,
-                davidFincher);
+                davidFincher, List.of(davidFincher , bradPitt)) ;
 
         System.out.println("------------------------------------------");
         // Execução de filmes
@@ -61,5 +74,7 @@ public class Aplicacao {
         ianMcKellen.descricao();
         peterJackson.descricao();
         davidFincher.descricao();
+
+        oClubeDaLuta.exibirCreditos();
     }
 }

@@ -1,10 +1,12 @@
 package exercicio.um;
 
+import java.time.LocalDate;
+
 public class Ator extends Pessoa {
     private int quantidadeDeOscars;
 
-    public Ator(String nome, int idade, int quantidadeDeOscars, Genero genero) {
-        super(nome, idade, genero);
+    public Ator(String nome, LocalDate dataNascimento, Genero genero, int quantidadeDeOscars) {
+        super(nome, dataNascimento, genero);
         this.quantidadeDeOscars = quantidadeDeOscars;
     }
 
