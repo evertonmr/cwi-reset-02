@@ -11,8 +11,6 @@ public class MinhaCasaMinhaDesgraca {
 
         ImoveisParaFinanciamento opcoesParaFinanciamento = new ImoveisParaFinanciamento();
 
-
-
         /**
          * INÍCIO
          *
@@ -58,6 +56,7 @@ public class MinhaCasaMinhaDesgraca {
                                 "Quarulhos",
                                 UnidadeFederativa.SAO_PAULO),
                         true));
+
         opcoesParaFinanciamento.registrarImovel(
                 new Casa(120000.00,
                         new Endereco(   "Verônica",
@@ -68,14 +67,11 @@ public class MinhaCasaMinhaDesgraca {
                                 UnidadeFederativa.RIO_DE_JANEIRO),
                         false));
 
-
         /**
          * FIM
          *
          * NÃO MODIFICAR ESTA CLASSE APÓS ESTA LINHA.
          */
-
-
 
         List<Imovel> todasAsOpcoes = opcoesParaFinanciamento.buscarOpcoes(Double.MAX_VALUE);
         if (todasAsOpcoes == null || todasAsOpcoes.isEmpty()) {
