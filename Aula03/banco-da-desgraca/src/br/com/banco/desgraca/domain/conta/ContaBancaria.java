@@ -77,4 +77,6 @@ public interface ContaBancaria {
      * @param fim Data de fim para filtro. Pode ser null.
      */
     void exibirExtrato(LocalDate inicio, LocalDate fim);
+
+    void recebeTransferencia(Double valor, LocalDate data);
 }

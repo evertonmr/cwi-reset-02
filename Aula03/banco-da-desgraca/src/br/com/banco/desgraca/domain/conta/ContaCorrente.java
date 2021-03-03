@@ -4,8 +4,6 @@ package br.com.banco.desgraca.domain.conta;
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.exception.SaqueException;
 
-import java.text.DecimalFormat;
-import java.time.LocalDate;
 
 public class ContaCorrente extends ContaBancariaPadrao {
 
@@ -15,53 +13,34 @@ public class ContaCorrente extends ContaBancariaPadrao {
     }
 
     @Override
-    public InstituicaoBancaria getInstituicaoBancaria() {
-        return super.getInstituicaoBancaria();
+    protected void validaBanco(InstituicaoBancaria banco) {
     }
 
     @Override
-    public Double consultarSaldo() {
-        return super.consultarSaldo();
+    protected Double calculaTaxaSaque(Double valor) {
+        return 0.0;
     }
 
     @Override
-    public void depositar(Double valor) {
-        super.depositar(valor);
-    }
-
-    @Override
-    public void sacar(Double valor) {
-        if ((valor % 5) != 0){
+    protected void validaSaque(Double valor) {
+        if ((valor % 5) != 0) {
             throw new SaqueException("Não é possível sacar valores que não sejam divisíveis por 5.");
         }
-        super.sacar(valor);
     }
 
     @Override
-    public void transferir(Double valor, ContaBancaria contaDestino) {
-        super.transferir(valor, contaDestino);
-        Double taxa = 0.1;
-        if (!contaDestino.getInstituicaoBancaria().equals(this.getInstituicaoBancaria())){
-            this.setSaldo(consultarSaldo() - (valor * taxa));
-            System.out.println("Foi cobrada uma taxa de serviço no valor de " +
-                    DecimalFormat.getCurrencyInstance().format(valor * taxa));
+    protected Double calcularTaxaDeTransferencia(Double valor, ContaBancaria contaDestino) {
+        Double taxa = 0.0;
+        if (!contaDestino.getInstituicaoBancaria().equals(this.getInstituicaoBancaria())) {
+            taxa = 0.01;
         }
-
-    }
-
-    @Override
-    public void exibirExtrato(LocalDate inicio, LocalDate fim) {
-        super.exibirExtrato(inicio, fim);
+        Double valorTaxa = valor * taxa;
+        return valorTaxa;
     }
 
     @Override
     public String toString() {
         return "conta corrente " + super.toString();
-    }
-
-    @Override
-    public void setSaldo(Double saldo) {
-        super.setSaldo(saldo);
     }
 
 }
